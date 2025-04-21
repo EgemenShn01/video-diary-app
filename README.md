@@ -1,50 +1,60 @@
-# Welcome to your Expo app 👋
+echo "# Video Diary App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Açıklama**
+Video Diary App, Expo tabanlı React Native ile geliştirilmiş, kullanıcıların cihazlarından video seçip 5 saniyelik kesitini kırpmasına, kırpılan kliplere isim ve açıklama eklemesine, ardından bu videoları listeleyip detay sayfasında izleyip düzenlemesine olanak tanıyan bir mobil uygulamadır.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Özellikler
 
-   ```bash
+- **Video Seçme:** Cihaz galerisinden video seçimi (expo-image-picker).
+- **Video Kırpma:** FFmpegKit ile 5 saniyelik kesit kırpma, Tanstack Query ile asenkron iş yönetimi.
+- **Meta Veri Ekleme:** Zod ile form doğrulaması, kullanıcı tanımlı isim ve açıklama.
+- **Kayıtlı Videolar:** Zustand + AsyncStorage (persist) ile uygulama yeniden başlatıldığında verilerin saklanması.
+- **Listeleme & Detay:** Kayıtlı videoların listelenmesi, detay/değiştirme/silme sayfası.
+- **Navigasyon:** Expo Router.
+- **Stil:** NativeWind (TailwindCSS benzeri sınıflar), global arka plan görseli.
+- **Animasyonlar:** React Native Reanimated ile Fade-in, puls ve hover efektleri.
+
+---
+
+## 📦 Teknolojiler
+
+- **Core:** Expo, React Native, Expo Router
+- **State Management:** Zustand, AsyncStorage
+- **Asenkron İşlemler:** @tanstack/react-query
+- **Video İşleme:** ffmpeg-kit-react-native, expo-av
+- **Form Doğrulama:** Zod
+- **Stil:** NativeWind, TailwindCSS
+- **Animasyon:** React Native Reanimated
+- **Ek Paketler:** expo-image-picker, @react-native-community/slider
+
+---
+
+
+1. Depoyu klonlayın:
+   git clone <repo-url>
+   cd video-diary-app
+2. Bağımlılıkları yükleyin:
+   npx expo install
    npm install
-   ```
+3. Çalıştırın:
+   npm start        # Metro bundler
+   npm run android  # Android emülatör veya cihaz
+   npm run ios      # iOS simülatöre başlatır (macOS)
+   npm run web      # Web versiyon
 
-2. Start the app
 
-   ```bash
-    npx expo start
-   ```
+## 🧩 Komutlar
 
-In the output, you'll find options to open the app in a
+| Komut         | Açıklama                             |
+|---------------|--------------------------------------|
+| npm start     | Metro bundler başlatır               |
+| npm run android | Android cihaz/simülatöre başlatır |
+| npm run ios   | iOS simülatöre başlatır (macOS)      |
+| npm run web   | Web versiyon                         |
+| npm test      | Jest ile testleri çalıştırır         |
+| npm run lint  | Kod linter                           |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.

@@ -1,4 +1,4 @@
-echo "# Video Diary App
+Video Diary App
 
 **Açıklama**
 Video Diary App, Expo tabanlı React Native ile geliştirilmiş, kullanıcıların cihazlarından video seçip 5 saniyelik kesitini kırpmasına, kırpılan kliplere isim ve açıklama eklemesine, ardından bu videoları listeleyip detay sayfasında izleyip düzenlemesine olanak tanıyan bir mobil uygulamadır.
